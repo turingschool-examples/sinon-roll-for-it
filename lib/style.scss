@@ -1,4 +1,45 @@
-$border-color: #CCC;
+// h/t hexagon shape css: http://codepen.io/gpyne/pen/iElhp
+.hexagon {
+  position: relative;
+  display: inline-block;
+  margin: 1px 18px;
+  background-color: hsl(220, 75%, 75%);
+  text-align: center;
+}
+
+.hexagon, .hexagon::before, .hexagon::after {
+  /* easy way: height is width * 1.732
+  actual formula is 2*(width/(2*Math.tan(Math.PI/6)))
+  remove border-radius for straight edges on hexagons */
+  width: 40px;
+  height: 69px;
+  border-radius: 20%/5%;
+}
+.hexagon::before {
+  background-color: inherit;
+  content: "";
+  position: absolute;
+  left: 0;
+  transform: rotate(-60deg);
+}
+.hexagon::after {
+  background-color: inherit;
+  content: "";
+  position: absolute;
+  left: 0;
+  transform: rotate(60deg);
+}
+
+.hexagontent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 140%;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  z-index: 100;
+}
 
 body, input {
   font: menu;
@@ -9,8 +50,6 @@ body {
   margin: auto;
 }
 
-.messages {
-  border: 1px dashed $border-color;
-  min-height: 10px;
-  margin: 1em 0;
+h1 {
+  margin-bottom: 0;
 }
