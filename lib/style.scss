@@ -1,0 +1,16 @@
+$border-color: #CCC;
+
+body, input {
+  font: menu;
+}
+
+body {
+  width: 500px;
+  margin: auto;
+}
+
+.messages {
+  border: 1px dashed $border-color;
+  min-height: 10px;
+  margin: 1em 0;
+}
