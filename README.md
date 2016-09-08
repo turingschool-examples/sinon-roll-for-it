@@ -1,12 +1,13 @@
-# Chat Box
+# Roll For It
 
-A simple API for storing some chat messages.
+A simple playground for using Sinon.js
+
+[Lesson Plan](https://github.com/turingschool/lesson_plans/blob/master/ruby_04-apis_and_scalability/testing_javascript-mocks_and_stubs.markdown)
 
 ## Setup
 
 ```
 npm install
-npm run selenium-install
 ```
 
 ## Running
@@ -16,11 +17,3 @@ npm start
 ```
 
 Go visit `http://localhost:3000`.
-
-## Endpoints
-
-* `GET /messages` returns a all of the messages available.
-* `GET /messages/:id` returns a given message from the API.
-* `POST /messages` creates a new message.
-* `PUT /messages/:id` updates the content of the message.
-* `DELETE /messages/:id` deletes a message.
