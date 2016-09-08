@@ -5,7 +5,7 @@ const roll = require('../lib/roll.js');
 const play = require('../lib/play.js');
 
 describe('Play.castMagicMissile', function () {
-  it('should cheat on a lousy dTwenty Roll', function () {
+  it.skip('should cheat on a lousy dTwenty Roll', function () {
     var critical_fail = 1;
 
     var stub = sinon.stub(roll, 'dTwenty').returns(critical_fail);
@@ -20,7 +20,7 @@ describe('Play.castMagicMissile', function () {
     mock.restore();
   });
 
-  it('should not cheat on a natural 20', function () {
+  it.skip('should not cheat on a natural 20', function () {
     var natural_twenty = 20;
 
     var stub = sinon.stub(roll, 'dTwenty').returns(natural_twenty);

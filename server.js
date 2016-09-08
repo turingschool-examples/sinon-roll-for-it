@@ -19,7 +19,7 @@ app.set('view engine', 'html');
 app.engine('html', hbs.__express);
 app.set('port', process.env.PORT || 3000);
 app.locals.title = 'Roll For It';
-app.locals.rolls= [];
+app.locals.rolls = [];
 
 hbs.registerPartials(__dirname + '/views/partials');
 
